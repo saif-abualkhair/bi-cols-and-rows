@@ -1,5 +1,5 @@
 import { Component, ElementRef, Input, OnChanges, Renderer2, SimpleChanges } from '@angular/core';
-import { Size } from '../models/size.type';
+import { Size } from '../models/column-size.type';
 
 @Component({
   selector: 'column',
