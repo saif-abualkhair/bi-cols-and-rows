@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Padding, MarginHorizontal, MarginStart, MarginEnd, Margin, MarginVertical, PaddingHorizontal, PaddingVertical, PaddingBottom, PaddingStart, PaddingTop, PaddingEnd, Col, Row, MarginBottom, MarginTop } from '../public-api';
+import { RowAlignSelf } from './directives/row-align-self';
+import { RowAlignItems } from './directives/row-align-items';
+import { RowJustifyContent } from './directives/row-justify-content';
 
 
 
@@ -7,6 +10,9 @@ import { Padding, MarginHorizontal, MarginStart, MarginEnd, Margin, MarginVertic
   declarations: [],
   imports: [
     Row,
+    RowAlignSelf,
+    RowAlignItems,
+    RowJustifyContent,
     Col,
     Margin,
     MarginEnd,
@@ -25,6 +31,9 @@ import { Padding, MarginHorizontal, MarginStart, MarginEnd, Margin, MarginVertic
   ],
   exports: [
     Row,
+    RowAlignSelf,
+    RowAlignItems,
+    RowJustifyContent,
     Col,
     Margin,
     MarginEnd,
