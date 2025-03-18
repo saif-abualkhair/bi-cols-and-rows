@@ -1,13 +1,13 @@
-<row justify-content="between" [margin-md]="4" padding-vertical="5">
-  <column [size]="size" class="bg-primary border" >
+<row [justify-content]="size ? 'between' : 'around'" [margin-md]="size ? 4 : 2" padding-vertical="5">
+  <column [size]="size ? 2 : 4" class="bg-primary border" >
     test1
   </column>
 
-  <column [size]="size" class="bg-primary border">
+  <column [size]="size ? 2 : 4" class="bg-primary border">
     test2
   </column>
 </row> 
 
 <button class="btn btn-primary" (click)="toggleSize()">
-  toggle size
+  toggle
 </button>

@@ -45,6 +45,7 @@ export class PaddingBottom implements OnChanges{
   }
 
   addClass(size: PaddingValues, paddingType: 'xl' | 'lg' | 'md' | 'md' | 'sm' | 'xm' | null = null) {
+    this.removeSizeClass(paddingType);
     this.renderer.addClass(this.elementRef.nativeElement, this.getPaddingClass(size, paddingType));
   }
 

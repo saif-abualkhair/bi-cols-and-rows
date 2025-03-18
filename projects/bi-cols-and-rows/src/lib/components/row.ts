@@ -12,30 +12,69 @@ import { AlignItems } from '../models/align-items.type';
 export class Row implements OnChanges {
   @Input('justify-content') justifyContent: JustifyContent = 'start';
   @Input('align-items') alignItems: AlignItems = 'start';
+  @Input('align-self') alignSelf: AlignItems = 'start';
 
-  ngOnChanges(changes: SimpleChanges): void {
-    if (changes['justifyContent']?.currentValue) {
-      this.setJustifyContentClass();
+  constructor (private elementRef: ElementRef<HTMLElement>, private renderer: Renderer2) {
+    this.addClass('row');
+  }
+
+  ngOnChanges (changes: SimpleChanges): void {
+    if (changes['justifyContent']) {
+      this.removeJustifyContentClass();
+      this.justifyContent ? this.addClass(this.justifyContentClass) : this.removeJustifyContentClass();
+    }
+
+    if (changes['alignItems']) {
+      this.removeJustifyContentClass();
+      this.alignItems ? this.addClass(this.alignItemsClass) : this.removeAlignItemsClass();
+    }
+
+    if (changes['alignSelf']) {
+      this.removeJustifyContentClass();
+      this.alignSelf ? this.addClass(this.alignSelfClass) : this.removeAlignSelfClass();
     }
   }
 
-  constructor(private elementRef: ElementRef<HTMLElement>, private renderer2: Renderer2) {
-    this.bindBaseClasses();
+  addClass (cls: string) {
+    this.renderer.addClass(this.elementRef.nativeElement, cls)
   }
 
-  bindBaseClasses() {
-    this.renderer2.addClass(this.elementRef.nativeElement, 'row')
+  removeAlignItemsClass () {
+    const regex = new RegExp(`^align-items-.*`);
+    const classToRemove = Array.from(this.elementRef.nativeElement.classList)
+      .find(cls => regex.test(cls));
+    if (classToRemove) {
+      this.renderer.removeClass(this.elementRef.nativeElement, classToRemove);
+    }
   }
 
-  setJustifyContentClass() {
-    this.renderer2.addClass(this.elementRef.nativeElement, this.justifyContentClass);
+  removeJustifyContentClass () {
+    const regex = new RegExp(`^justify-content-.*`);
+    const classToRemove = Array.from(this.elementRef.nativeElement.classList)
+      .find(cls => regex.test(cls));
+    if (classToRemove) {
+      this.renderer.removeClass(this.elementRef.nativeElement, classToRemove);
+    }
   }
 
-  get justifyContentClass() {
+  removeAlignSelfClass () {
+    const regex = new RegExp(`^align-self-.*`);
+    const classToRemove = Array.from(this.elementRef.nativeElement.classList)
+      .find(cls => regex.test(cls));
+    if (classToRemove) {
+      this.renderer.removeClass(this.elementRef.nativeElement, classToRemove);
+    }
+  }
+
+  get justifyContentClass () {
     return `justify-content-${this.justifyContent}`
   }
 
-  get alignItemsClass() {
-    return `justify-content-${this.justifyContent}`
+  get alignItemsClass () {
+    return `align-items-${this.alignItems}`
+  }
+
+  get alignSelfClass () {
+    return `align-self-${this.alignSelf}`
   }
 }

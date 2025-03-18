@@ -12,9 +12,9 @@ export class MarginBottom implements OnChanges {
   @Input('margin-bottom-sm') marginBottomSm?: MarginValues;
   @Input('margin-bottom-xm') marginBottomXm?: MarginValues;
 
-  constructor(private elementRef: ElementRef<HTMLElement>, private renderer: Renderer2) { }
+  constructor (private elementRef: ElementRef<HTMLElement>, private renderer: Renderer2) { }
 
-  ngOnChanges(changes: SimpleChanges): void {
+  ngOnChanges (changes: SimpleChanges): void {
     if (changes['marginBottom']) {
       this.marginBottom ? this.addClass(this.marginBottom) : this.removeSizeClass()
     }
@@ -44,11 +44,12 @@ export class MarginBottom implements OnChanges {
     }
   }
 
-  addClass(size: MarginValues, marginType: 'xl' | 'lg' | 'md' | 'md' | 'sm' | 'xm' | null = null) {
+  addClass (size: MarginValues, marginType: 'xl' | 'lg' | 'md' | 'md' | 'sm' | 'xm' | null = null) {
+    this.removeSizeClass(marginType);
     this.renderer.addClass(this.elementRef.nativeElement, this.getMarginClass(size, marginType));
   }
 
-  removeSizeClass(sizeType: 'xl' | 'lg' | 'md' | 'sm' | 'xm' | null = null) {
+  removeSizeClass (sizeType: 'xl' | 'lg' | 'md' | 'sm' | 'xm' | null = null) {
     const regex = sizeType ? new RegExp(`^mb-${sizeType}-(1[0-2]|[1-9])$`) : new RegExp(`^mb-(1[0-2]|[1-9])$`);
     const classToRemove = Array.from(this.elementRef.nativeElement.classList)
       .find(cls => regex.test(cls));
@@ -57,7 +58,7 @@ export class MarginBottom implements OnChanges {
     }
   }
 
-  getMarginClass(size: MarginValues, marginType: 'xl' | 'lg' | 'md' | 'md' | 'sm' | 'xm' | null = null) {
+  getMarginClass (size: MarginValues, marginType: 'xl' | 'lg' | 'md' | 'md' | 'sm' | 'xm' | null = null) {
     return marginType ? `mb-${marginType}-${size}` : `mb-${size}`;
   }
 }

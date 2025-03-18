@@ -45,6 +45,7 @@ export class MarginEnd implements OnChanges {
   }
 
   addClass(size: MarginValues, marginType: 'xl' | 'lg' | 'md' | 'md' | 'sm' | 'xm' | null = null) {
+    this.removeSizeClass(marginType);
     this.renderer.addClass(this.elementRef.nativeElement, this.getMarginClass(size, marginType));
   }
 
