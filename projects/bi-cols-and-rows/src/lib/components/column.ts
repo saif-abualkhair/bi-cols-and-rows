@@ -3,13 +3,12 @@ import { Size } from '../models/column-size.type';
 
 @Component({
   selector: 'column',
-  imports: [],
   template: `
     <ng-content></ng-content>
   `
 })
 
-export class Col implements OnChanges {
+export class Column implements OnChanges {
   @Input('size') size?: Size;
   @Input('size-xl') sizeXl?: Size;
   @Input('size-lg') sizeLg?: Size;
@@ -17,7 +16,7 @@ export class Col implements OnChanges {
   @Input('size-sm') sizeSm?: Size;
   @Input('size-xm') sizeXm?: Size;
 
-  ngOnChanges (changes: SimpleChanges): void {
+  ngOnChanges(changes: SimpleChanges): void {
     if (changes['size']) {
       this.size ? this.addClass(this.getSizeClass(this.size)) : this.removeSizeClass();
     }
@@ -43,28 +42,28 @@ export class Col implements OnChanges {
     }
   }
 
-  constructor (private elementRef: ElementRef<HTMLElement>, private renderer2: Renderer2) {
+  constructor(private elementRef: ElementRef<HTMLElement>, private renderer: Renderer2) {
     this.bindBaseClasses();
   }
 
-  bindBaseClasses () {
-    this.renderer2.addClass(this.elementRef.nativeElement, 'col')
+  bindBaseClasses() {
+    this.renderer.addClass(this.elementRef.nativeElement, 'col')
   }
 
-  addClass (classValue: string) {
-    this.renderer2.addClass(this.elementRef.nativeElement, classValue);
+  addClass(classValue: string) {
+    this.renderer.addClass(this.elementRef.nativeElement, classValue);
   }
 
-  removeSizeClass (sizeType: 'xl' | 'lg' | 'md' | 'sm' | 'xm' | null = null) {
+  removeSizeClass(sizeType: 'xl' | 'lg' | 'md' | 'sm' | 'xm' | null = null) {
     const regex = sizeType ? new RegExp(`^col-${sizeType}-(1[0-2]|[1-9])$`) : new RegExp(`^col-(1[0-2]|[1-9])$`);
     const classToRemove = Array.from(this.elementRef.nativeElement.classList)
       .find(cls => regex.test(cls));
     if (classToRemove) {
-      this.renderer2.removeClass(this.elementRef.nativeElement, classToRemove);
+      this.renderer.removeClass(this.elementRef.nativeElement, classToRemove);
     }
   }
 
-  getSizeClass (size: Size, sizeType: 'xl' | 'lg' | 'md' | 'sm' | 'xm' | null = null) {
+  getSizeClass(size: Size, sizeType: 'xl' | 'lg' | 'md' | 'sm' | 'xm' | null = null) {
     return sizeType ? `col-${sizeType}-${size}` : `col-${size}`
   }
 }

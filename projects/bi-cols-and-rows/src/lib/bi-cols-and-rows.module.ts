@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Padding, MarginHorizontal, MarginStart, MarginEnd, Margin, MarginVertical, PaddingHorizontal, PaddingVertical, PaddingBottom, PaddingStart, PaddingTop, PaddingEnd, Col, Row, MarginBottom, MarginTop } from '../public-api';
+import { Padding, MarginHorizontal, MarginStart, MarginEnd, Margin, MarginVertical, PaddingHorizontal, PaddingVertical, PaddingBottom, PaddingStart, PaddingTop, PaddingEnd, Column, Row, MarginBottom, MarginTop } from '../public-api';
 import { RowAlignSelf } from './directives/row-align-self';
 import { RowAlignItems } from './directives/row-align-items';
 import { RowJustifyContent } from './directives/row-justify-content';
@@ -13,7 +13,7 @@ import { RowJustifyContent } from './directives/row-justify-content';
     RowAlignSelf,
     RowAlignItems,
     RowJustifyContent,
-    Col,
+    Column,
     Margin,
     MarginEnd,
     MarginTop,
@@ -34,7 +34,7 @@ import { RowJustifyContent } from './directives/row-justify-content';
     RowAlignSelf,
     RowAlignItems,
     RowJustifyContent,
-    Col,
+    Column,
     Margin,
     MarginEnd,
     MarginTop,
