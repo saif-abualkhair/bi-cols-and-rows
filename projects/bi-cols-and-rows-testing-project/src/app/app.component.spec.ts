@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'bi-cols-and-rows-testing-project' title`, () => {
+  it(`should have the 'ngx-bootstrap-blocks-testing-project' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('bi-cols-and-rows-testing-project');
+    expect(app.title).toEqual('ngx-bootstrap-blocks-testing-project');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, bi-cols-and-rows-testing-project');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, ngx-bootstrap-blocks-testing-project');
   });
 });

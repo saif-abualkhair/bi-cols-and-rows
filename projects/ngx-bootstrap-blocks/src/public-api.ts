@@ -1,8 +1,8 @@
 /*
- * Public API Surface of bi-cols-and-rows
+ * Public API Surface of ngx-bootstrap-blocks
  */
 
-export * from './lib/bi-cols-and-rows.module';
+export * from './lib/ngx-bootstrap-blocks.module';
 export * from './lib/components/column';
 export * from './lib/components/row';
 export * from './lib/directives/margin';

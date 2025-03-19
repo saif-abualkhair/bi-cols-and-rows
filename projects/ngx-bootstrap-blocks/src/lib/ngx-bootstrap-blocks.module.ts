@@ -12,7 +12,6 @@ import { GuttersVertical } from './directives/gutters-vertical';
 import { GuttersHorizontal } from './directives/gutters-horizontal';
 
 @NgModule({
-  declarations: [],
   imports: [
     Row,
     RowAlignItems,
@@ -70,4 +69,4 @@ import { GuttersHorizontal } from './directives/gutters-horizontal';
     PaddingHorizontal
   ]
 })
-export class BiColsAndRowsModule { }
+export class NgxBootstrapBlocksModule { }

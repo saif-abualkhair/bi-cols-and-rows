@@ -1,5 +1,5 @@
 {
-  "name": "bi-cols-and-rows",
+  "name": "ngx-bootstrap-blocks",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^19.2.0",

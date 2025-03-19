@@ -3,23 +3,23 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "bi-cols-and-rows": {
+    "ngx-bootstrap-blocks": {
       "projectType": "library",
-      "root": "projects/bi-cols-and-rows",
-      "sourceRoot": "projects/bi-cols-and-rows/src",
+      "root": "projects/ngx-bootstrap-blocks",
+      "sourceRoot": "projects/ngx-bootstrap-blocks/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/bi-cols-and-rows/ng-package.json"
+            "project": "projects/ngx-bootstrap-blocks/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/bi-cols-and-rows/tsconfig.lib.prod.json"
+              "tsConfig": "projects/ngx-bootstrap-blocks/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/bi-cols-and-rows/tsconfig.lib.json"
+              "tsConfig": "projects/ngx-bootstrap-blocks/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -27,7 +27,7 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "tsConfig": "projects/bi-cols-and-rows/tsconfig.spec.json",
+            "tsConfig": "projects/ngx-bootstrap-blocks/tsconfig.spec.json",
             "polyfills": [
               "zone.js",
               "zone.js/testing"
@@ -36,39 +36,39 @@
         }
       }
     },
-    "bi-cols-and-rows-testing-project": {
+    "ngx-bootstrap-blocks-testing-project": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
         }
       },
-      "root": "projects/bi-cols-and-rows-testing-project",
-      "sourceRoot": "projects/bi-cols-and-rows-testing-project/src",
+      "root": "projects/ngx-bootstrap-blocks-testing-project",
+      "sourceRoot": "projects/ngx-bootstrap-blocks-testing-project/src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/bi-cols-and-rows-testing-project",
-            "index": "projects/bi-cols-and-rows-testing-project/src/index.html",
-            "browser": "projects/bi-cols-and-rows-testing-project/src/main.ts",
+            "outputPath": "dist/ngx-bootstrap-blocks-testing-project",
+            "index": "projects/ngx-bootstrap-blocks-testing-project/src/index.html",
+            "browser": "projects/ngx-bootstrap-blocks-testing-project/src/main.ts",
             "polyfills": [
               "zone.js"
             ],
-            "tsConfig": "projects/bi-cols-and-rows-testing-project/tsconfig.app.json",
+            "tsConfig": "projects/ngx-bootstrap-blocks-testing-project/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
               {
                 "glob": "**/*",
-                "input": "projects/bi-cols-and-rows-testing-project/public"
+                "input": "projects/ngx-bootstrap-blocks-testing-project/public"
               }
             ],
             "styles": [
               {
                 "input": "node_modules/bootstrap/scss/bootstrap.scss"
               },
-              "projects/bi-cols-and-rows-testing-project/src/styles.scss"
+              "projects/ngx-bootstrap-blocks-testing-project/src/styles.scss"
             ],
             "scripts": []
           },
@@ -100,10 +100,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "bi-cols-and-rows-testing-project:build:production"
+              "buildTarget": "ngx-bootstrap-blocks-testing-project:build:production"
             },
             "development": {
-              "buildTarget": "bi-cols-and-rows-testing-project:build:development"
+              "buildTarget": "ngx-bootstrap-blocks-testing-project:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -118,16 +118,16 @@
               "zone.js",
               "zone.js/testing"
             ],
-            "tsConfig": "projects/bi-cols-and-rows-testing-project/tsconfig.spec.json",
+            "tsConfig": "projects/ngx-bootstrap-blocks-testing-project/tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
             "assets": [
               {
                 "glob": "**/*",
-                "input": "projects/bi-cols-and-rows-testing-project/public"
+                "input": "projects/ngx-bootstrap-blocks-testing-project/public"
               }
             ],
             "styles": [
-              "projects/bi-cols-and-rows-testing-project/src/styles.scss"
+              "projects/ngx-bootstrap-blocks-testing-project/src/styles.scss"
             ],
             "scripts": []
           }

@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { Size } from '../../../bi-cols-and-rows/src/lib/models/column-size.type';
-import { BiColsAndRowsModule } from '../../../bi-cols-and-rows/src/lib/bi-cols-and-rows.module';
+import { Size } from '../../../ngx-bootstrap-blocks/src/lib/models/column-size.type';
+import { NgxBootstrapBlocksModule } from '../../../ngx-bootstrap-blocks/src/lib/ngx-bootstrap-blocks.module';
 
 @Component({
   selector: 'app-root',
-  imports: [BiColsAndRowsModule],
+  imports: [NgxBootstrapBlocksModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
