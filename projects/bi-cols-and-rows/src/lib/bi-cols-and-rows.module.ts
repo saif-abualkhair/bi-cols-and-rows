@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Padding, MarginHorizontal, MarginStart, MarginEnd, Margin, MarginVertical, PaddingHorizontal, PaddingVertical, PaddingBottom, PaddingStart, PaddingTop, PaddingEnd, Column, Row, MarginBottom, MarginTop } from '../public-api';
-import { RowAlignSelf } from './directives/row-align-self';
+import { ColumnAlignSelf, } from './directives/column-align-self';
 import { RowAlignItems } from './directives/row-align-items';
 import { RowJustifyContent } from './directives/row-justify-content';
 import { Gutters } from './directives/gutters';
@@ -11,13 +11,10 @@ import { GuttersBottom } from './directives/gutters-bottom';
 import { GuttersVertical } from './directives/gutters-vertical';
 import { GuttersHorizontal } from './directives/gutters-horizontal';
 
-
-
 @NgModule({
   declarations: [],
   imports: [
     Row,
-    RowAlignSelf,
     RowAlignItems,
     RowJustifyContent,
     Gutters,
@@ -28,6 +25,7 @@ import { GuttersHorizontal } from './directives/gutters-horizontal';
     GuttersVertical,
     GuttersHorizontal,
     Column,
+    ColumnAlignSelf,
     Margin,
     MarginEnd,
     MarginTop,
@@ -45,7 +43,6 @@ import { GuttersHorizontal } from './directives/gutters-horizontal';
   ],
   exports: [
     Row,
-    RowAlignSelf,
     RowAlignItems,
     RowJustifyContent,
     Gutters,
@@ -56,6 +53,7 @@ import { GuttersHorizontal } from './directives/gutters-horizontal';
     GuttersVertical,
     GuttersHorizontal,
     Column,
+    ColumnAlignSelf,
     Margin,
     MarginEnd,
     MarginTop,
