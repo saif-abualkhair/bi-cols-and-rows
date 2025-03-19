@@ -3,6 +3,13 @@ import { Padding, MarginHorizontal, MarginStart, MarginEnd, Margin, MarginVertic
 import { RowAlignSelf } from './directives/row-align-self';
 import { RowAlignItems } from './directives/row-align-items';
 import { RowJustifyContent } from './directives/row-justify-content';
+import { Gutters } from './directives/gutters';
+import { GuttersEnd } from './directives/gutters-end';
+import { GuttersStart } from './directives/gutters-start';
+import { GuttersTop } from './directives/gutters-top';
+import { GuttersBottom } from './directives/gutters-bottom';
+import { GuttersVertical } from './directives/gutters-vertical';
+import { GuttersHorizontal } from './directives/gutters-horizontal';
 
 
 
@@ -13,6 +20,13 @@ import { RowJustifyContent } from './directives/row-justify-content';
     RowAlignSelf,
     RowAlignItems,
     RowJustifyContent,
+    Gutters,
+    GuttersEnd,
+    GuttersTop,
+    GuttersStart,
+    GuttersBottom,
+    GuttersVertical,
+    GuttersHorizontal,
     Column,
     Margin,
     MarginEnd,
@@ -34,6 +48,13 @@ import { RowJustifyContent } from './directives/row-justify-content';
     RowAlignSelf,
     RowAlignItems,
     RowJustifyContent,
+    Gutters,
+    GuttersEnd,
+    GuttersTop,
+    GuttersStart,
+    GuttersBottom,
+    GuttersVertical,
+    GuttersHorizontal,
     Column,
     Margin,
     MarginEnd,
