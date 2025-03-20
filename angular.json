@@ -33,6 +33,41 @@
               "zone.js/testing"
             ]
           }
+        },
+        "storybook": {
+          "builder": "@storybook/angular:start-storybook",
+          "options": {
+            "configDir": "projects/ngx-bootstrap-blocks/.storybook",
+            "browserTarget": "ngx-bootstrap-blocks:build",
+            "compodoc": true,
+            "compodocArgs": [
+              "-e",
+              "json",
+              "-d",
+              "projects/ngx-bootstrap-blocks"
+            ],
+            "styles": [
+              {
+                "input": "node_modules/bootstrap/scss/bootstrap.scss"
+              }
+            ],
+            "port": 6006
+          }
+        },
+        "build-storybook": {
+          "builder": "@storybook/angular:build-storybook",
+          "options": {
+            "configDir": "projects/ngx-bootstrap-blocks/.storybook",
+            "browserTarget": "ngx-bootstrap-blocks:build",
+            "compodoc": true,
+            "compodocArgs": [
+              "-e",
+              "json",
+              "-d",
+              "projects/ngx-bootstrap-blocks"
+            ],
+            "outputDir": "dist/storybook/ngx-bootstrap-blocks"
+          }
         }
       }
     },

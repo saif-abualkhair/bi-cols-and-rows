@@ -7,7 +7,6 @@ import { Component, ElementRef, Renderer2 } from '@angular/core';
   `
 })
 export class Row {
-
   constructor(private elementRef: ElementRef<HTMLElement>, private renderer: Renderer2) {
     this.addBaseClass();
   }

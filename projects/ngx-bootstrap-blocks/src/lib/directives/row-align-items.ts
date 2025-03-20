@@ -12,40 +12,40 @@ export class RowAlignItems implements OnChanges {
   @Input('align-items-sm') alignItemsSm?: AlignItems;
   @Input('align-items-xm') alignItemsXm?: AlignItems;
 
-  constructor(private elementRef: ElementRef<HTMLElement>, private renderer: Renderer2) { }
+  constructor (private elementRef: ElementRef<HTMLElement>, private renderer: Renderer2) { }
 
-  ngOnChanges(changes: SimpleChanges): void {
+  ngOnChanges (changes: SimpleChanges): void {
     if (changes['alignItems']) {
       this.alignItems ? this.addClass(this.alignItems) : this.removeClass();
     }
 
     if (changes['alignItemsXl']) {
-      this.alignItemsXl ? this.addClass(this.alignItemsXl) : this.removeClass();
+      this.alignItemsXl ? this.addClass(this.alignItemsXl, 'xl') : this.removeClass();
     }
 
     if (changes['alignItemsLg']) {
-      this.alignItemsXl ? this.addClass(this.alignItemsXl) : this.removeClass();
+      this.alignItemsLg ? this.addClass(this.alignItemsLg, 'lg') : this.removeClass();
     }
 
     if (changes['alignItemsMd']) {
-      this.alignItemsXl ? this.addClass(this.alignItemsXl) : this.removeClass();
+      this.alignItemsMd ? this.addClass(this.alignItemsMd, 'md') : this.removeClass();
     }
 
     if (changes['alignItemsSm']) {
-      this.alignItemsXl ? this.addClass(this.alignItemsXl) : this.removeClass();
+      this.alignItemsSm ? this.addClass(this.alignItemsSm, 'sm') : this.removeClass();
     }
 
     if (changes['alignItemsXm']) {
-      this.alignItemsXl ? this.addClass(this.alignItemsXl) : this.removeClass();
+      this.alignItemsXm ? this.addClass(this.alignItemsXm, 'xm') : this.removeClass();
     }
   }
 
-  addClass(justification: AlignItems, responsiveType: 'xl' | 'lg' | 'md' | 'md' | 'sm' | 'xm' | null = null) {
+  addClass (justification: AlignItems, responsiveType: 'xl' | 'lg' | 'md' | 'md' | 'sm' | 'xm' | null = null) {
     this.removeClass(responsiveType);
     this.renderer.addClass(this.elementRef.nativeElement, this.getClass(justification, responsiveType));
   }
 
-  removeClass(responsiveType: 'xl' | 'lg' | 'md' | 'sm' | 'xm' | null = null) {
+  removeClass (responsiveType: 'xl' | 'lg' | 'md' | 'sm' | 'xm' | null = null) {
     const regex = responsiveType ? new RegExp(`^align-items${responsiveType}-.*`) : new RegExp(`^align-items-.*`);
     const classToRemove = Array.from(this.elementRef.nativeElement.classList)
       .find(cls => regex.test(cls));
@@ -54,7 +54,7 @@ export class RowAlignItems implements OnChanges {
     }
   }
 
-  getClass(justification: AlignItems, responsiveType: 'xl' | 'lg' | 'md' | 'md' | 'sm' | 'xm' | null = null) {
+  getClass (justification: AlignItems, responsiveType: 'xl' | 'lg' | 'md' | 'md' | 'sm' | 'xm' | null = null) {
     return responsiveType ? `align-items-${responsiveType}-${justification}` : `align-items-${justification}`;
   }
 }

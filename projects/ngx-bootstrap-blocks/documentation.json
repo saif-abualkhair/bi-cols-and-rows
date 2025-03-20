@@ -1,0 +1,192 @@
+{
+    "pipes": [],
+    "interfaces": [],
+    "injectables": [],
+    "guards": [],
+    "interceptors": [],
+    "classes": [],
+    "directives": [],
+    "components": [],
+    "modules": [],
+    "miscellaneous": {
+        "variables": [
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-bootstrap-blocks/src/stories/row.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<RowArgs>",
+                "defaultValue": "{\n  title: 'Example/Row',\n  component: Row,\n  tags: ['autodocs'],\n  argTypes: {\n    'justify-content': {\n      control: { type: 'select' },\n      options: ['start', 'end', 'center', 'between', 'around', 'evenly',],\n    },\n    'justify-content-xl': {\n      control: { type: 'select' },\n      options: ['start', 'end', 'center', 'between', 'around', 'evenly',],\n    },\n    'justify-content-lg': {\n      control: { type: 'select' },\n      options: ['start', 'end', 'center', 'between', 'around', 'evenly',],\n    },\n    'justify-content-md': {\n      control: { type: 'select' },\n      options: ['start', 'end', 'center', 'between', 'around', 'evenly',],\n    },\n    'justify-content-sm': {\n      control: { type: 'select' },\n      options: ['start', 'end', 'center', 'between', 'around', 'evenly',],\n    },\n    'justify-content-xm': {\n      control: { type: 'select' },\n      options: ['start', 'end', 'center', 'between', 'around', 'evenly',],\n    },\n    'align-items': {\n      control: { type: 'select' },\n      options: ['start', 'end', 'center', 'baseline', 'stretch',],\n    },\n    'align-items-xl': {\n      control: { type: 'select' },\n      options: ['start', 'end', 'center', 'baseline', 'stretch',],\n    },\n    \"align-items-lg\": {\n      control: { type: 'select' },\n      options: ['start', 'end', 'center', 'baseline', 'stretch',],\n    },\n    'align-items-md': {\n      control: { type: 'select' },\n      options: ['start', 'end', 'center', 'baseline', 'stretch',],\n    },\n    'align-items-sm': {\n      control: { type: 'select' },\n      options: ['start', 'end', 'center', 'baseline', 'stretch',],\n    },\n    'align-items-xm': {\n      control: { type: 'select' },\n      options: ['start', 'end', 'center', 'baseline', 'stretch',],\n    },\n    'margin': {\n      control: { type: 'select' },\n      options: ['0', '1', '2', '3', '4', '5', 'auto',],\n    },\n    'margin-xl': {\n      control: { type: 'select' },\n      options: ['0', '1', '2', '3', '4', '5', 'auto',],\n    },\n    'margin-lg': {\n      control: { type: 'select' },\n      options: ['0', '1', '2', '3', '4', '5', 'auto',],\n    },\n    'margin-md': {\n      control: { type: 'select' },\n      options: ['0', '1', '2', '3', '4', '5', 'auto',],\n    },\n    'margin-sm': {\n      control: { type: 'select' },\n      options: ['0', '1', '2', '3', '4', '5', 'auto',],\n    },\n    'margin-xm': {\n      control: { type: 'select' },\n      options: ['0', '1', '2', '3', '4', '5', 'auto',],\n    },\n    'padding': {\n      control: { type: 'select' },\n      options: ['0', '1', '2', '3', '4', '5',],\n    },\n    'padding-xl': {\n      control: { type: 'select' },\n      options: ['0', '1', '2', '3', '4', '5',],\n    },\n    'padding-lg': {\n      control: { type: 'select' },\n      options: ['0', '1', '2', '3', '4', '5',],\n    },\n    \"padding-md\": {\n      control: { type: 'select' },\n      options: ['0', '1', '2', '3', '4', '5',],\n    },\n    \"padding-sm\": {\n      control: { type: 'select' },\n      options: ['0', '1', '2', '3', '4', '5',],\n    },\n    \"padding-xm\": {\n      control: { type: 'select' },\n      options: ['0', '1', '2', '3', '4', '5',],\n    },\n  },\n  decorators: [\n    applicationConfig({\n      providers: [importProvidersFrom(NgxBootstrapBlocksModule)],\n    }),\n    moduleMetadata({\n      imports: [NgxBootstrapBlocksModule]\n    }),\n  ],\n  render: (args) => {\n    const templateArgs = getTemplateArgs(args);\n\n    return {\n      props: args as Row,\n      template: `\n        <row ${templateArgs}>\n          <column class=\"bg-primary border border-dark\" size=\"3\">Column 1</column>\n  \n          <column class=\"bg-primary border border-dark\" size=\"3\">Column 2</column>\n  \n          <column class=\"bg-primary border border-dark\" size=\"3\">Column 3</column>\n        </row>\n      `,\n    }\n  },\n}"
+            },
+            {
+                "name": "preview",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-bootstrap-blocks/.storybook/preview.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Preview",
+                "defaultValue": "{\n  parameters: {\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/i,\n      },\n    },\n  },\n}"
+            },
+            {
+                "name": "RowAll",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-bootstrap-blocks/src/stories/row.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    'justify-content': undefined,\n    'justify-content-xl': undefined,\n    'justify-content-lg': undefined,\n    'justify-content-md': undefined,\n    'justify-content-sm': undefined,\n    'justify-content-xm': undefined,\n    'align-items': undefined,\n    'align-items-xl': undefined,\n    'align-items-lg': undefined,\n    'align-items-md': undefined,\n    'align-items-sm': undefined,\n    'align-items-xm': undefined,\n    'margin': undefined,\n    'margin-xl': undefined,\n    'margin-lg': undefined,\n    'margin-md': undefined,\n    'margin-sm': undefined,\n    'margin-xm': undefined,\n    'padding': undefined,\n    'padding-xl': undefined,\n    'padding-lg': undefined,\n    'padding-md': undefined,\n    'padding-sm': undefined,\n  },\n}"
+            }
+        ],
+        "functions": [],
+        "typealiases": [
+            {
+                "name": "RowArgs",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "literal type",
+                "file": "projects/ngx-bootstrap-blocks/src/stories/row.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 187
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<RowArgs>",
+                "file": "projects/ngx-bootstrap-blocks/src/stories/row.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            }
+        ],
+        "enumerations": [],
+        "groupedVariables": {
+            "projects/ngx-bootstrap-blocks/src/stories/row.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-bootstrap-blocks/src/stories/row.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<RowArgs>",
+                    "defaultValue": "{\n  title: 'Example/Row',\n  component: Row,\n  tags: ['autodocs'],\n  argTypes: {\n    'justify-content': {\n      control: { type: 'select' },\n      options: ['start', 'end', 'center', 'between', 'around', 'evenly',],\n    },\n    'justify-content-xl': {\n      control: { type: 'select' },\n      options: ['start', 'end', 'center', 'between', 'around', 'evenly',],\n    },\n    'justify-content-lg': {\n      control: { type: 'select' },\n      options: ['start', 'end', 'center', 'between', 'around', 'evenly',],\n    },\n    'justify-content-md': {\n      control: { type: 'select' },\n      options: ['start', 'end', 'center', 'between', 'around', 'evenly',],\n    },\n    'justify-content-sm': {\n      control: { type: 'select' },\n      options: ['start', 'end', 'center', 'between', 'around', 'evenly',],\n    },\n    'justify-content-xm': {\n      control: { type: 'select' },\n      options: ['start', 'end', 'center', 'between', 'around', 'evenly',],\n    },\n    'align-items': {\n      control: { type: 'select' },\n      options: ['start', 'end', 'center', 'baseline', 'stretch',],\n    },\n    'align-items-xl': {\n      control: { type: 'select' },\n      options: ['start', 'end', 'center', 'baseline', 'stretch',],\n    },\n    \"align-items-lg\": {\n      control: { type: 'select' },\n      options: ['start', 'end', 'center', 'baseline', 'stretch',],\n    },\n    'align-items-md': {\n      control: { type: 'select' },\n      options: ['start', 'end', 'center', 'baseline', 'stretch',],\n    },\n    'align-items-sm': {\n      control: { type: 'select' },\n      options: ['start', 'end', 'center', 'baseline', 'stretch',],\n    },\n    'align-items-xm': {\n      control: { type: 'select' },\n      options: ['start', 'end', 'center', 'baseline', 'stretch',],\n    },\n    'margin': {\n      control: { type: 'select' },\n      options: ['0', '1', '2', '3', '4', '5', 'auto',],\n    },\n    'margin-xl': {\n      control: { type: 'select' },\n      options: ['0', '1', '2', '3', '4', '5', 'auto',],\n    },\n    'margin-lg': {\n      control: { type: 'select' },\n      options: ['0', '1', '2', '3', '4', '5', 'auto',],\n    },\n    'margin-md': {\n      control: { type: 'select' },\n      options: ['0', '1', '2', '3', '4', '5', 'auto',],\n    },\n    'margin-sm': {\n      control: { type: 'select' },\n      options: ['0', '1', '2', '3', '4', '5', 'auto',],\n    },\n    'margin-xm': {\n      control: { type: 'select' },\n      options: ['0', '1', '2', '3', '4', '5', 'auto',],\n    },\n    'padding': {\n      control: { type: 'select' },\n      options: ['0', '1', '2', '3', '4', '5',],\n    },\n    'padding-xl': {\n      control: { type: 'select' },\n      options: ['0', '1', '2', '3', '4', '5',],\n    },\n    'padding-lg': {\n      control: { type: 'select' },\n      options: ['0', '1', '2', '3', '4', '5',],\n    },\n    \"padding-md\": {\n      control: { type: 'select' },\n      options: ['0', '1', '2', '3', '4', '5',],\n    },\n    \"padding-sm\": {\n      control: { type: 'select' },\n      options: ['0', '1', '2', '3', '4', '5',],\n    },\n    \"padding-xm\": {\n      control: { type: 'select' },\n      options: ['0', '1', '2', '3', '4', '5',],\n    },\n  },\n  decorators: [\n    applicationConfig({\n      providers: [importProvidersFrom(NgxBootstrapBlocksModule)],\n    }),\n    moduleMetadata({\n      imports: [NgxBootstrapBlocksModule]\n    }),\n  ],\n  render: (args) => {\n    const templateArgs = getTemplateArgs(args);\n\n    return {\n      props: args as Row,\n      template: `\n        <row ${templateArgs}>\n          <column class=\"bg-primary border border-dark\" size=\"3\">Column 1</column>\n  \n          <column class=\"bg-primary border border-dark\" size=\"3\">Column 2</column>\n  \n          <column class=\"bg-primary border border-dark\" size=\"3\">Column 3</column>\n        </row>\n      `,\n    }\n  },\n}"
+                },
+                {
+                    "name": "RowAll",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-bootstrap-blocks/src/stories/row.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    'justify-content': undefined,\n    'justify-content-xl': undefined,\n    'justify-content-lg': undefined,\n    'justify-content-md': undefined,\n    'justify-content-sm': undefined,\n    'justify-content-xm': undefined,\n    'align-items': undefined,\n    'align-items-xl': undefined,\n    'align-items-lg': undefined,\n    'align-items-md': undefined,\n    'align-items-sm': undefined,\n    'align-items-xm': undefined,\n    'margin': undefined,\n    'margin-xl': undefined,\n    'margin-lg': undefined,\n    'margin-md': undefined,\n    'margin-sm': undefined,\n    'margin-xm': undefined,\n    'padding': undefined,\n    'padding-xl': undefined,\n    'padding-lg': undefined,\n    'padding-md': undefined,\n    'padding-sm': undefined,\n  },\n}"
+                }
+            ],
+            "projects/ngx-bootstrap-blocks/.storybook/preview.ts": [
+                {
+                    "name": "preview",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-bootstrap-blocks/.storybook/preview.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Preview",
+                    "defaultValue": "{\n  parameters: {\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/i,\n      },\n    },\n  },\n}"
+                }
+            ]
+        },
+        "groupedFunctions": {},
+        "groupedEnumerations": {},
+        "groupedTypeAliases": {
+            "projects/ngx-bootstrap-blocks/src/stories/row.stories.ts": [
+                {
+                    "name": "RowArgs",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "literal type",
+                    "file": "projects/ngx-bootstrap-blocks/src/stories/row.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 187
+                },
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<RowArgs>",
+                    "file": "projects/ngx-bootstrap-blocks/src/stories/row.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ]
+        }
+    },
+    "routes": [],
+    "coverage": {
+        "count": 0,
+        "status": "low",
+        "files": [
+            {
+                "filePath": "projects/ngx-bootstrap-blocks/.storybook/preview.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "preview",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ngx-bootstrap-blocks/src/stories/row.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ngx-bootstrap-blocks/src/stories/row.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "RowAll",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ngx-bootstrap-blocks/src/stories/row.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "RowArgs",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ngx-bootstrap-blocks/src/stories/row.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            }
+        ]
+    }
+}

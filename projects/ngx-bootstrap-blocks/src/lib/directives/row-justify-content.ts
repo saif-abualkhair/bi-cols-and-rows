@@ -20,23 +20,23 @@ export class RowJustifyContent implements OnChanges {
     }
 
     if (changes['justifyContentXl']) {
-      this.justifyContentXl ? this.addClass(this.justifyContentXl) : this.removeClass();
+      this.justifyContentXl ? this.addClass(this.justifyContentXl, 'xl') : this.removeClass();
     }
 
     if (changes['justifyContentLg']) {
-      this.justifyContentXl ? this.addClass(this.justifyContentXl) : this.removeClass();
+      this.justifyContentLg ? this.addClass(this.justifyContentLg, 'lg') : this.removeClass();
     }
 
     if (changes['justifyContentMd']) {
-      this.justifyContentXl ? this.addClass(this.justifyContentXl) : this.removeClass();
+      this.justifyContentMd ? this.addClass(this.justifyContentMd, 'md') : this.removeClass();
     }
 
     if (changes['justifyContentSm']) {
-      this.justifyContentXl ? this.addClass(this.justifyContentXl) : this.removeClass();
+      this.justifyContentSm ? this.addClass(this.justifyContentSm, 'sm') : this.removeClass();
     }
 
     if (changes['justifyContentXm']) {
-      this.justifyContentXl ? this.addClass(this.justifyContentXl) : this.removeClass();
+      this.justifyContentXm ? this.addClass(this.justifyContentXm, 'xm') : this.removeClass();
     }
   }
 
