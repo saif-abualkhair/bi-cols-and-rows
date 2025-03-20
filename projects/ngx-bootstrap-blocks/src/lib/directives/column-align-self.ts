@@ -24,19 +24,19 @@ export class ColumnAlignSelf implements OnChanges {
     }
 
     if (changes['alignSelfLg']) {
-      this.alignSelfXl ? this.addClass(this.alignSelfXl) : this.removeClass();
+      this.alignSelfLg ? this.addClass(this.alignSelfLg) : this.removeClass();
     }
 
     if (changes['alignSelfMd']) {
-      this.alignSelfXl ? this.addClass(this.alignSelfXl) : this.removeClass();
+      this.alignSelfMd ? this.addClass(this.alignSelfMd) : this.removeClass();
     }
 
     if (changes['alignSelfSm']) {
-      this.alignSelfXl ? this.addClass(this.alignSelfXl) : this.removeClass();
+      this.alignSelfSm ? this.addClass(this.alignSelfSm) : this.removeClass();
     }
 
     if (changes['alignSelfXm']) {
-      this.alignSelfXl ? this.addClass(this.alignSelfXl) : this.removeClass();
+      this.alignSelfXm ? this.addClass(this.alignSelfXm) : this.removeClass();
     }
   }
 

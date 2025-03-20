@@ -11,6 +11,36 @@
     "miscellaneous": {
         "variables": [
             {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-bootstrap-blocks/src/stories/column.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    'size': '3',\n    'size-xl': 'none',\n    'size-lg': 'none',\n    'size-md': 'none',\n    'size-sm': 'none',\n    'size-xm': 'none',\n    'align-self': 'none',\n    'align-self-xl': 'none',\n    'align-self-lg': 'none',\n    'align-self-md': 'none',\n    'align-self-sm': 'none',\n    'align-self-xm': 'none'\n\n  },\n}"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-bootstrap-blocks/src/stories/row.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    'justify-content': 'none',\n    'justify-content-xl': 'none',\n    'justify-content-lg': 'none',\n    'justify-content-md': 'none',\n    'justify-content-sm': 'none',\n    'justify-content-xm': 'none',\n    'align-items': 'none',\n    'align-items-xl': 'none',\n    'align-items-lg': 'none',\n    'align-items-md': 'none',\n    'align-items-sm': 'none',\n    'align-items-xm': 'none',\n    'margin': 'none',\n    'margin-xl': 'none',\n    'margin-lg': 'none',\n    'margin-md': 'none',\n    'margin-sm': 'none',\n    'margin-xm': 'none',\n    'margin-vertical': 'none',\n    'margin-horizontal': 'none',\n    'padding': 'none',\n    'padding-xl': 'none',\n    'padding-lg': 'none',\n    'padding-md': 'none',\n    'padding-sm': 'none',\n    'padding-xm': 'none',\n    'padding-vertical': 'none',\n    'padding-horizontal': 'none',\n  },\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-bootstrap-blocks/src/stories/column.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<ColumnArgs>",
+                "defaultValue": "{\n  title: 'Example/Column',\n  component: Column,\n  tags: ['autodocs'],\n  argTypes: {\n    'size': {\n      control: { type: 'select' },\n      options: ['none', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', 'auto'],\n    },\n    'size-xl': {\n      control: { type: 'select' },\n      options: ['none', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', 'auto'],\n    },\n    'size-lg': {\n      control: { type: 'select' },\n      options: ['none', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', 'auto'],\n    },\n    'size-md': {\n      control: { type: 'select' },\n      options: ['none', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', 'auto'],\n    },\n    'size-sm': {\n      control: { type: 'select' },\n      options: ['none', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', 'auto'],\n    },\n    'size-xm': {\n      control: { type: 'select' },\n      options: ['none', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', 'auto'],\n    },\n    'align-self': {\n      control: { type: 'select' },\n      options: ['none', 'start', 'end', 'center', 'baseline', 'stretch'],\n    },\n    'align-self-xl': {\n      control: { type: 'select' },\n      options: ['none', 'start', 'end', 'center', 'baseline', 'stretch'],\n    },\n    'align-self-lg': {\n      control: { type: 'select' },\n      options: ['none', 'start', 'end', 'center', 'baseline', 'stretch'],\n    },\n    'align-self-md': {\n      control: { type: 'select' },\n      options: ['none', 'start', 'end', 'center', 'baseline', 'stretch'],\n    },\n    'align-self-sm': {\n      control: { type: 'select' },\n      options: ['none', 'start', 'end', 'center', 'baseline', 'stretch'],\n    },\n    'align-self-xm': {\n      control: { type: 'select' },\n      options: ['none', 'start', 'end', 'center', 'baseline', 'stretch'],\n    }\n    \n  },\n  decorators: [\n    applicationConfig({\n      providers: [importProvidersFrom(NgxBootstrapBlocksModule)],\n    }),\n    moduleMetadata({\n      imports: [NgxBootstrapBlocksModule]\n    }),\n  ],\n  render: (args) => {\n    const templateArgs = getTemplateArgs(args);\n\n    return {\n      props: args,\n      template: `\n        <row>\n          <column class=\"bg-primary border border-dark\" ${templateArgs}>Column 1</column>\n  \n          <column class=\"bg-primary border border-dark\" ${templateArgs}>Column 2</column>\n  \n          <column class=\"bg-primary border border-dark\" ${templateArgs}>Column 3</column>\n        </row>\n      `,\n    }\n  },\n}"
+            },
+            {
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -18,7 +48,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<RowArgs>",
-                "defaultValue": "{\n  title: 'Example/Row',\n  component: Row,\n  tags: ['autodocs'],\n  argTypes: {\n    'justify-content': {\n      control: { type: 'select' },\n      options: ['start', 'end', 'center', 'between', 'around', 'evenly',],\n    },\n    'justify-content-xl': {\n      control: { type: 'select' },\n      options: ['start', 'end', 'center', 'between', 'around', 'evenly',],\n    },\n    'justify-content-lg': {\n      control: { type: 'select' },\n      options: ['start', 'end', 'center', 'between', 'around', 'evenly',],\n    },\n    'justify-content-md': {\n      control: { type: 'select' },\n      options: ['start', 'end', 'center', 'between', 'around', 'evenly',],\n    },\n    'justify-content-sm': {\n      control: { type: 'select' },\n      options: ['start', 'end', 'center', 'between', 'around', 'evenly',],\n    },\n    'justify-content-xm': {\n      control: { type: 'select' },\n      options: ['start', 'end', 'center', 'between', 'around', 'evenly',],\n    },\n    'align-items': {\n      control: { type: 'select' },\n      options: ['start', 'end', 'center', 'baseline', 'stretch',],\n    },\n    'align-items-xl': {\n      control: { type: 'select' },\n      options: ['start', 'end', 'center', 'baseline', 'stretch',],\n    },\n    \"align-items-lg\": {\n      control: { type: 'select' },\n      options: ['start', 'end', 'center', 'baseline', 'stretch',],\n    },\n    'align-items-md': {\n      control: { type: 'select' },\n      options: ['start', 'end', 'center', 'baseline', 'stretch',],\n    },\n    'align-items-sm': {\n      control: { type: 'select' },\n      options: ['start', 'end', 'center', 'baseline', 'stretch',],\n    },\n    'align-items-xm': {\n      control: { type: 'select' },\n      options: ['start', 'end', 'center', 'baseline', 'stretch',],\n    },\n    'margin': {\n      control: { type: 'select' },\n      options: ['0', '1', '2', '3', '4', '5', 'auto',],\n    },\n    'margin-xl': {\n      control: { type: 'select' },\n      options: ['0', '1', '2', '3', '4', '5', 'auto',],\n    },\n    'margin-lg': {\n      control: { type: 'select' },\n      options: ['0', '1', '2', '3', '4', '5', 'auto',],\n    },\n    'margin-md': {\n      control: { type: 'select' },\n      options: ['0', '1', '2', '3', '4', '5', 'auto',],\n    },\n    'margin-sm': {\n      control: { type: 'select' },\n      options: ['0', '1', '2', '3', '4', '5', 'auto',],\n    },\n    'margin-xm': {\n      control: { type: 'select' },\n      options: ['0', '1', '2', '3', '4', '5', 'auto',],\n    },\n    'padding': {\n      control: { type: 'select' },\n      options: ['0', '1', '2', '3', '4', '5',],\n    },\n    'padding-xl': {\n      control: { type: 'select' },\n      options: ['0', '1', '2', '3', '4', '5',],\n    },\n    'padding-lg': {\n      control: { type: 'select' },\n      options: ['0', '1', '2', '3', '4', '5',],\n    },\n    \"padding-md\": {\n      control: { type: 'select' },\n      options: ['0', '1', '2', '3', '4', '5',],\n    },\n    \"padding-sm\": {\n      control: { type: 'select' },\n      options: ['0', '1', '2', '3', '4', '5',],\n    },\n    \"padding-xm\": {\n      control: { type: 'select' },\n      options: ['0', '1', '2', '3', '4', '5',],\n    },\n  },\n  decorators: [\n    applicationConfig({\n      providers: [importProvidersFrom(NgxBootstrapBlocksModule)],\n    }),\n    moduleMetadata({\n      imports: [NgxBootstrapBlocksModule]\n    }),\n  ],\n  render: (args) => {\n    const templateArgs = getTemplateArgs(args);\n\n    return {\n      props: args as Row,\n      template: `\n        <row ${templateArgs}>\n          <column class=\"bg-primary border border-dark\" size=\"3\">Column 1</column>\n  \n          <column class=\"bg-primary border border-dark\" size=\"3\">Column 2</column>\n  \n          <column class=\"bg-primary border border-dark\" size=\"3\">Column 3</column>\n        </row>\n      `,\n    }\n  },\n}"
+                "defaultValue": "{\n  title: 'Example/Row',\n  component: Row,\n  tags: ['autodocs'],\n  argTypes: {\n    'justify-content': {\n      control: { type: 'select' },\n      options: ['none', 'start', 'end', 'center', 'between', 'around', 'evenly'],\n    },\n    'justify-content-xl': {\n      control: { type: 'select' },\n      options: ['none', 'start', 'end', 'center', 'between', 'around', 'evenly'],\n    },\n    'justify-content-lg': {\n      control: { type: 'select' },\n      options: ['none', 'start', 'end', 'center', 'between', 'around', 'evenly'],\n    },\n    'justify-content-md': {\n      control: { type: 'select' },\n      options: ['none', 'start', 'end', 'center', 'between', 'around', 'evenly'],\n    },\n    'justify-content-sm': {\n      control: { type: 'select' },\n      options: ['none', 'start', 'end', 'center', 'between', 'around', 'evenly'],\n    },\n    'justify-content-xm': {\n      control: { type: 'select' },\n      options: ['none', 'start', 'end', 'center', 'between', 'around', 'evenly'],\n    },\n    'align-items': {\n      control: { type: 'select' },\n      options: ['none', 'start', 'end', 'center', 'baseline', 'stretch'],\n    },\n    'align-items-xl': {\n      control: { type: 'select' },\n      options: ['none', 'start', 'end', 'center', 'baseline', 'stretch'],\n    },\n    'align-items-lg': {\n      control: { type: 'select' },\n      options: ['none', 'start', 'end', 'center', 'baseline', 'stretch'],\n    },\n    'align-items-md': {\n      control: { type: 'select' },\n      options: ['none', 'start', 'end', 'center', 'baseline', 'stretch'],\n    },\n    'align-items-sm': {\n      control: { type: 'select' },\n      options: ['none', 'start', 'end', 'center', 'baseline', 'stretch'],\n    },\n    'align-items-xm': {\n      control: { type: 'select' },\n      options: ['none', 'start', 'end', 'center', 'baseline', 'stretch'],\n    },\n    'margin': {\n      control: { type: 'select' },\n      options: ['none', '0', '1', '2', '3', '4', '5', 'auto'],\n    },\n    'margin-xl': {\n      control: { type: 'select' },\n      options: ['none', '0', '1', '2', '3', '4', '5', 'auto'],\n    },\n    'margin-lg': {\n      control: { type: 'select' },\n      options: ['none', '0', '1', '2', '3', '4', '5', 'auto'],\n    },\n    'margin-md': {\n      control: { type: 'select' },\n      options: ['none', '0', '1', '2', '3', '4', '5', 'auto'],\n    },\n    'margin-sm': {\n      control: { type: 'select' },\n      options: ['none', '0', '1', '2', '3', '4', '5', 'auto'],\n    },\n    'margin-xm': {\n      control: { type: 'select' },\n      options: ['none', '0', '1', '2', '3', '4', '5', 'auto'],\n    },\n    'margin-vertical': {\n      control: { type: 'select' },\n      options: ['none', '0', '1', '2', '3', '4', '5', 'auto'],\n    },\n    'margin-horizontal': {\n      control: { type: 'select' },\n      options: ['none', '0', '1', '2', '3', '4', '5', 'auto'],\n    },\n    'padding': {\n      control: { type: 'select' },\n      options: ['none', '0', '1', '2', '3', '4', '5'],\n    },\n    'padding-xl': {\n      control: { type: 'select' },\n      options: ['none', '0', '1', '2', '3', '4', '5'],\n    },\n    'padding-lg': {\n      control: { type: 'select' },\n      options: ['none', '0', '1', '2', '3', '4', '5'],\n    },\n    'padding-md': {\n      control: { type: 'select' },\n      options: ['none', '0', '1', '2', '3', '4', '5'],\n    },\n    'padding-sm': {\n      control: { type: 'select' },\n      options: ['none', '0', '1', '2', '3', '4', '5'],\n    },\n    'padding-xm': {\n      control: { type: 'select' },\n      options: ['none', '0', '1', '2', '3', '4', '5'],\n    },\n    'padding-vertical': {\n      control: { type: 'select' },\n      options: ['none', '0', '1', '2', '3', '4', '5'],\n    },\n    'padding-horizontal': {\n      control: { type: 'select' },\n      options: ['none', '0', '1', '2', '3', '4', '5'],\n    },\n  },\n  decorators: [\n    applicationConfig({\n      providers: [importProvidersFrom(NgxBootstrapBlocksModule)],\n    }),\n    moduleMetadata({\n      imports: [NgxBootstrapBlocksModule]\n    }),\n  ],\n  render: (args) => {\n    const templateArgs = getTemplateArgs(args);\n\n    return {\n      props: args,\n      template: `\n        <row ${templateArgs}>\n          <column class=\"bg-primary border border-dark\" size=\"3\">Column 1</column>\n  \n          <column class=\"bg-primary border border-dark\" size=\"3\">Column 2</column>\n  \n          <column class=\"bg-primary border border-dark\" size=\"3\">Column 3</column>\n        </row>\n      `,\n    }\n  },\n}"
             },
             {
                 "name": "preview",
@@ -29,20 +59,21 @@
                 "deprecationMessage": "",
                 "type": "Preview",
                 "defaultValue": "{\n  parameters: {\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/i,\n      },\n    },\n  },\n}"
-            },
-            {
-                "name": "RowAll",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/ngx-bootstrap-blocks/src/stories/row.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n  args: {\n    'justify-content': undefined,\n    'justify-content-xl': undefined,\n    'justify-content-lg': undefined,\n    'justify-content-md': undefined,\n    'justify-content-sm': undefined,\n    'justify-content-xm': undefined,\n    'align-items': undefined,\n    'align-items-xl': undefined,\n    'align-items-lg': undefined,\n    'align-items-md': undefined,\n    'align-items-sm': undefined,\n    'align-items-xm': undefined,\n    'margin': undefined,\n    'margin-xl': undefined,\n    'margin-lg': undefined,\n    'margin-md': undefined,\n    'margin-sm': undefined,\n    'margin-xm': undefined,\n    'padding': undefined,\n    'padding-xl': undefined,\n    'padding-lg': undefined,\n    'padding-md': undefined,\n    'padding-sm': undefined,\n  },\n}"
             }
         ],
         "functions": [],
         "typealiases": [
+            {
+                "name": "ColumnArgs",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "literal type",
+                "file": "projects/ngx-bootstrap-blocks/src/stories/column.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 187
+            },
             {
                 "name": "RowArgs",
                 "ctype": "miscellaneous",
@@ -58,6 +89,17 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
+                "rawtype": "StoryObj<ColumnArgs>",
+                "file": "projects/ngx-bootstrap-blocks/src/stories/column.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
                 "rawtype": "StoryObj<RowArgs>",
                 "file": "projects/ngx-bootstrap-blocks/src/stories/row.stories.ts",
                 "deprecated": false,
@@ -68,7 +110,39 @@
         ],
         "enumerations": [],
         "groupedVariables": {
+            "projects/ngx-bootstrap-blocks/src/stories/column.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-bootstrap-blocks/src/stories/column.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    'size': '3',\n    'size-xl': 'none',\n    'size-lg': 'none',\n    'size-md': 'none',\n    'size-sm': 'none',\n    'size-xm': 'none',\n    'align-self': 'none',\n    'align-self-xl': 'none',\n    'align-self-lg': 'none',\n    'align-self-md': 'none',\n    'align-self-sm': 'none',\n    'align-self-xm': 'none'\n\n  },\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-bootstrap-blocks/src/stories/column.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<ColumnArgs>",
+                    "defaultValue": "{\n  title: 'Example/Column',\n  component: Column,\n  tags: ['autodocs'],\n  argTypes: {\n    'size': {\n      control: { type: 'select' },\n      options: ['none', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', 'auto'],\n    },\n    'size-xl': {\n      control: { type: 'select' },\n      options: ['none', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', 'auto'],\n    },\n    'size-lg': {\n      control: { type: 'select' },\n      options: ['none', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', 'auto'],\n    },\n    'size-md': {\n      control: { type: 'select' },\n      options: ['none', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', 'auto'],\n    },\n    'size-sm': {\n      control: { type: 'select' },\n      options: ['none', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', 'auto'],\n    },\n    'size-xm': {\n      control: { type: 'select' },\n      options: ['none', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', 'auto'],\n    },\n    'align-self': {\n      control: { type: 'select' },\n      options: ['none', 'start', 'end', 'center', 'baseline', 'stretch'],\n    },\n    'align-self-xl': {\n      control: { type: 'select' },\n      options: ['none', 'start', 'end', 'center', 'baseline', 'stretch'],\n    },\n    'align-self-lg': {\n      control: { type: 'select' },\n      options: ['none', 'start', 'end', 'center', 'baseline', 'stretch'],\n    },\n    'align-self-md': {\n      control: { type: 'select' },\n      options: ['none', 'start', 'end', 'center', 'baseline', 'stretch'],\n    },\n    'align-self-sm': {\n      control: { type: 'select' },\n      options: ['none', 'start', 'end', 'center', 'baseline', 'stretch'],\n    },\n    'align-self-xm': {\n      control: { type: 'select' },\n      options: ['none', 'start', 'end', 'center', 'baseline', 'stretch'],\n    }\n    \n  },\n  decorators: [\n    applicationConfig({\n      providers: [importProvidersFrom(NgxBootstrapBlocksModule)],\n    }),\n    moduleMetadata({\n      imports: [NgxBootstrapBlocksModule]\n    }),\n  ],\n  render: (args) => {\n    const templateArgs = getTemplateArgs(args);\n\n    return {\n      props: args,\n      template: `\n        <row>\n          <column class=\"bg-primary border border-dark\" ${templateArgs}>Column 1</column>\n  \n          <column class=\"bg-primary border border-dark\" ${templateArgs}>Column 2</column>\n  \n          <column class=\"bg-primary border border-dark\" ${templateArgs}>Column 3</column>\n        </row>\n      `,\n    }\n  },\n}"
+                }
+            ],
             "projects/ngx-bootstrap-blocks/src/stories/row.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-bootstrap-blocks/src/stories/row.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    'justify-content': 'none',\n    'justify-content-xl': 'none',\n    'justify-content-lg': 'none',\n    'justify-content-md': 'none',\n    'justify-content-sm': 'none',\n    'justify-content-xm': 'none',\n    'align-items': 'none',\n    'align-items-xl': 'none',\n    'align-items-lg': 'none',\n    'align-items-md': 'none',\n    'align-items-sm': 'none',\n    'align-items-xm': 'none',\n    'margin': 'none',\n    'margin-xl': 'none',\n    'margin-lg': 'none',\n    'margin-md': 'none',\n    'margin-sm': 'none',\n    'margin-xm': 'none',\n    'margin-vertical': 'none',\n    'margin-horizontal': 'none',\n    'padding': 'none',\n    'padding-xl': 'none',\n    'padding-lg': 'none',\n    'padding-md': 'none',\n    'padding-sm': 'none',\n    'padding-xm': 'none',\n    'padding-vertical': 'none',\n    'padding-horizontal': 'none',\n  },\n}"
+                },
                 {
                     "name": "meta",
                     "ctype": "miscellaneous",
@@ -77,17 +151,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<RowArgs>",
-                    "defaultValue": "{\n  title: 'Example/Row',\n  component: Row,\n  tags: ['autodocs'],\n  argTypes: {\n    'justify-content': {\n      control: { type: 'select' },\n      options: ['start', 'end', 'center', 'between', 'around', 'evenly',],\n    },\n    'justify-content-xl': {\n      control: { type: 'select' },\n      options: ['start', 'end', 'center', 'between', 'around', 'evenly',],\n    },\n    'justify-content-lg': {\n      control: { type: 'select' },\n      options: ['start', 'end', 'center', 'between', 'around', 'evenly',],\n    },\n    'justify-content-md': {\n      control: { type: 'select' },\n      options: ['start', 'end', 'center', 'between', 'around', 'evenly',],\n    },\n    'justify-content-sm': {\n      control: { type: 'select' },\n      options: ['start', 'end', 'center', 'between', 'around', 'evenly',],\n    },\n    'justify-content-xm': {\n      control: { type: 'select' },\n      options: ['start', 'end', 'center', 'between', 'around', 'evenly',],\n    },\n    'align-items': {\n      control: { type: 'select' },\n      options: ['start', 'end', 'center', 'baseline', 'stretch',],\n    },\n    'align-items-xl': {\n      control: { type: 'select' },\n      options: ['start', 'end', 'center', 'baseline', 'stretch',],\n    },\n    \"align-items-lg\": {\n      control: { type: 'select' },\n      options: ['start', 'end', 'center', 'baseline', 'stretch',],\n    },\n    'align-items-md': {\n      control: { type: 'select' },\n      options: ['start', 'end', 'center', 'baseline', 'stretch',],\n    },\n    'align-items-sm': {\n      control: { type: 'select' },\n      options: ['start', 'end', 'center', 'baseline', 'stretch',],\n    },\n    'align-items-xm': {\n      control: { type: 'select' },\n      options: ['start', 'end', 'center', 'baseline', 'stretch',],\n    },\n    'margin': {\n      control: { type: 'select' },\n      options: ['0', '1', '2', '3', '4', '5', 'auto',],\n    },\n    'margin-xl': {\n      control: { type: 'select' },\n      options: ['0', '1', '2', '3', '4', '5', 'auto',],\n    },\n    'margin-lg': {\n      control: { type: 'select' },\n      options: ['0', '1', '2', '3', '4', '5', 'auto',],\n    },\n    'margin-md': {\n      control: { type: 'select' },\n      options: ['0', '1', '2', '3', '4', '5', 'auto',],\n    },\n    'margin-sm': {\n      control: { type: 'select' },\n      options: ['0', '1', '2', '3', '4', '5', 'auto',],\n    },\n    'margin-xm': {\n      control: { type: 'select' },\n      options: ['0', '1', '2', '3', '4', '5', 'auto',],\n    },\n    'padding': {\n      control: { type: 'select' },\n      options: ['0', '1', '2', '3', '4', '5',],\n    },\n    'padding-xl': {\n      control: { type: 'select' },\n      options: ['0', '1', '2', '3', '4', '5',],\n    },\n    'padding-lg': {\n      control: { type: 'select' },\n      options: ['0', '1', '2', '3', '4', '5',],\n    },\n    \"padding-md\": {\n      control: { type: 'select' },\n      options: ['0', '1', '2', '3', '4', '5',],\n    },\n    \"padding-sm\": {\n      control: { type: 'select' },\n      options: ['0', '1', '2', '3', '4', '5',],\n    },\n    \"padding-xm\": {\n      control: { type: 'select' },\n      options: ['0', '1', '2', '3', '4', '5',],\n    },\n  },\n  decorators: [\n    applicationConfig({\n      providers: [importProvidersFrom(NgxBootstrapBlocksModule)],\n    }),\n    moduleMetadata({\n      imports: [NgxBootstrapBlocksModule]\n    }),\n  ],\n  render: (args) => {\n    const templateArgs = getTemplateArgs(args);\n\n    return {\n      props: args as Row,\n      template: `\n        <row ${templateArgs}>\n          <column class=\"bg-primary border border-dark\" size=\"3\">Column 1</column>\n  \n          <column class=\"bg-primary border border-dark\" size=\"3\">Column 2</column>\n  \n          <column class=\"bg-primary border border-dark\" size=\"3\">Column 3</column>\n        </row>\n      `,\n    }\n  },\n}"
-                },
-                {
-                    "name": "RowAll",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/ngx-bootstrap-blocks/src/stories/row.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n  args: {\n    'justify-content': undefined,\n    'justify-content-xl': undefined,\n    'justify-content-lg': undefined,\n    'justify-content-md': undefined,\n    'justify-content-sm': undefined,\n    'justify-content-xm': undefined,\n    'align-items': undefined,\n    'align-items-xl': undefined,\n    'align-items-lg': undefined,\n    'align-items-md': undefined,\n    'align-items-sm': undefined,\n    'align-items-xm': undefined,\n    'margin': undefined,\n    'margin-xl': undefined,\n    'margin-lg': undefined,\n    'margin-md': undefined,\n    'margin-sm': undefined,\n    'margin-xm': undefined,\n    'padding': undefined,\n    'padding-xl': undefined,\n    'padding-lg': undefined,\n    'padding-md': undefined,\n    'padding-sm': undefined,\n  },\n}"
+                    "defaultValue": "{\n  title: 'Example/Row',\n  component: Row,\n  tags: ['autodocs'],\n  argTypes: {\n    'justify-content': {\n      control: { type: 'select' },\n      options: ['none', 'start', 'end', 'center', 'between', 'around', 'evenly'],\n    },\n    'justify-content-xl': {\n      control: { type: 'select' },\n      options: ['none', 'start', 'end', 'center', 'between', 'around', 'evenly'],\n    },\n    'justify-content-lg': {\n      control: { type: 'select' },\n      options: ['none', 'start', 'end', 'center', 'between', 'around', 'evenly'],\n    },\n    'justify-content-md': {\n      control: { type: 'select' },\n      options: ['none', 'start', 'end', 'center', 'between', 'around', 'evenly'],\n    },\n    'justify-content-sm': {\n      control: { type: 'select' },\n      options: ['none', 'start', 'end', 'center', 'between', 'around', 'evenly'],\n    },\n    'justify-content-xm': {\n      control: { type: 'select' },\n      options: ['none', 'start', 'end', 'center', 'between', 'around', 'evenly'],\n    },\n    'align-items': {\n      control: { type: 'select' },\n      options: ['none', 'start', 'end', 'center', 'baseline', 'stretch'],\n    },\n    'align-items-xl': {\n      control: { type: 'select' },\n      options: ['none', 'start', 'end', 'center', 'baseline', 'stretch'],\n    },\n    'align-items-lg': {\n      control: { type: 'select' },\n      options: ['none', 'start', 'end', 'center', 'baseline', 'stretch'],\n    },\n    'align-items-md': {\n      control: { type: 'select' },\n      options: ['none', 'start', 'end', 'center', 'baseline', 'stretch'],\n    },\n    'align-items-sm': {\n      control: { type: 'select' },\n      options: ['none', 'start', 'end', 'center', 'baseline', 'stretch'],\n    },\n    'align-items-xm': {\n      control: { type: 'select' },\n      options: ['none', 'start', 'end', 'center', 'baseline', 'stretch'],\n    },\n    'margin': {\n      control: { type: 'select' },\n      options: ['none', '0', '1', '2', '3', '4', '5', 'auto'],\n    },\n    'margin-xl': {\n      control: { type: 'select' },\n      options: ['none', '0', '1', '2', '3', '4', '5', 'auto'],\n    },\n    'margin-lg': {\n      control: { type: 'select' },\n      options: ['none', '0', '1', '2', '3', '4', '5', 'auto'],\n    },\n    'margin-md': {\n      control: { type: 'select' },\n      options: ['none', '0', '1', '2', '3', '4', '5', 'auto'],\n    },\n    'margin-sm': {\n      control: { type: 'select' },\n      options: ['none', '0', '1', '2', '3', '4', '5', 'auto'],\n    },\n    'margin-xm': {\n      control: { type: 'select' },\n      options: ['none', '0', '1', '2', '3', '4', '5', 'auto'],\n    },\n    'margin-vertical': {\n      control: { type: 'select' },\n      options: ['none', '0', '1', '2', '3', '4', '5', 'auto'],\n    },\n    'margin-horizontal': {\n      control: { type: 'select' },\n      options: ['none', '0', '1', '2', '3', '4', '5', 'auto'],\n    },\n    'padding': {\n      control: { type: 'select' },\n      options: ['none', '0', '1', '2', '3', '4', '5'],\n    },\n    'padding-xl': {\n      control: { type: 'select' },\n      options: ['none', '0', '1', '2', '3', '4', '5'],\n    },\n    'padding-lg': {\n      control: { type: 'select' },\n      options: ['none', '0', '1', '2', '3', '4', '5'],\n    },\n    'padding-md': {\n      control: { type: 'select' },\n      options: ['none', '0', '1', '2', '3', '4', '5'],\n    },\n    'padding-sm': {\n      control: { type: 'select' },\n      options: ['none', '0', '1', '2', '3', '4', '5'],\n    },\n    'padding-xm': {\n      control: { type: 'select' },\n      options: ['none', '0', '1', '2', '3', '4', '5'],\n    },\n    'padding-vertical': {\n      control: { type: 'select' },\n      options: ['none', '0', '1', '2', '3', '4', '5'],\n    },\n    'padding-horizontal': {\n      control: { type: 'select' },\n      options: ['none', '0', '1', '2', '3', '4', '5'],\n    },\n  },\n  decorators: [\n    applicationConfig({\n      providers: [importProvidersFrom(NgxBootstrapBlocksModule)],\n    }),\n    moduleMetadata({\n      imports: [NgxBootstrapBlocksModule]\n    }),\n  ],\n  render: (args) => {\n    const templateArgs = getTemplateArgs(args);\n\n    return {\n      props: args,\n      template: `\n        <row ${templateArgs}>\n          <column class=\"bg-primary border border-dark\" size=\"3\">Column 1</column>\n  \n          <column class=\"bg-primary border border-dark\" size=\"3\">Column 2</column>\n  \n          <column class=\"bg-primary border border-dark\" size=\"3\">Column 3</column>\n        </row>\n      `,\n    }\n  },\n}"
                 }
             ],
             "projects/ngx-bootstrap-blocks/.storybook/preview.ts": [
@@ -106,6 +170,30 @@
         "groupedFunctions": {},
         "groupedEnumerations": {},
         "groupedTypeAliases": {
+            "projects/ngx-bootstrap-blocks/src/stories/column.stories.ts": [
+                {
+                    "name": "ColumnArgs",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "literal type",
+                    "file": "projects/ngx-bootstrap-blocks/src/stories/column.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 187
+                },
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<ColumnArgs>",
+                    "file": "projects/ngx-bootstrap-blocks/src/stories/column.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
             "projects/ngx-bootstrap-blocks/src/stories/row.stories.ts": [
                 {
                     "name": "RowArgs",
@@ -148,7 +236,17 @@
                 "status": "low"
             },
             {
-                "filePath": "projects/ngx-bootstrap-blocks/src/stories/row.stories.ts",
+                "filePath": "projects/ngx-bootstrap-blocks/src/stories/column.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ngx-bootstrap-blocks/src/stories/column.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -158,11 +256,41 @@
                 "status": "low"
             },
             {
+                "filePath": "projects/ngx-bootstrap-blocks/src/stories/column.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "ColumnArgs",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ngx-bootstrap-blocks/src/stories/column.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "projects/ngx-bootstrap-blocks/src/stories/row.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "RowAll",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ngx-bootstrap-blocks/src/stories/row.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
